@@ -137,13 +137,13 @@ function ComplaintDashboard() {
       setIsLoading(true);
       let response;
       if (brand === "dijital-operator" || brand === "platinum" || brand === "gnc") {
-        response = await fetch("https://turkcell-sikayet-merkezi-api.onrender.com//turkcell/" + brand + "/" + pageIndex);
+        response = await fetch("https://turkcell-sikayet-merkezi-api.onrender.com/turkcell/" + brand + "/" + pageIndex);
       }
       else if (brand === "geforce-now-powered-by-game") {
-        response = await fetch("https://turkcell-sikayet-merkezi-api.onrender.com//game/" + pageIndex);
+        response = await fetch("https://turkcell-sikayet-merkezi-api.onrender.com/game/" + pageIndex);
       }
       else {
-        response = await fetch("https://turkcell-sikayet-merkezi-api.onrender.com//" + brand + "/" + pageIndex);
+        response = await fetch("https://turkcell-sikayet-merkezi-api.onrender.com/" + brand + "/" + pageIndex);
       }
       const complaintList = await response.json();
       setComplaints(complaintList);
